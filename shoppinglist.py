@@ -17,5 +17,24 @@ def show_shoppinglist():
         for item in list:
             print(item)
 
-add_item()
-show_shoppinglist()
+def menu():
+    while True:
+        print("-----Einkaufsliste-----")
+        print("1. Artikel hinzufügen")
+        print("2. Einkaufsliste anzeigen")
+        print("3. Programm beenden")
+        choice = input("1, 2 oder 3: ")
+        if choice == '1':
+            add_item()
+            continue
+        elif choice == '2':
+            show_shoppinglist()
+            continue
+        elif choice == '3':
+            break
+        else:
+            print("Falsche Eingabe!")
+            continue
+
+menu()
+
